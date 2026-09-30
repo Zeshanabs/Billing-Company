@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 
-function isPlaceholderValue(value?: string) {
+export function isPlaceholderValue(value?: string) {
   if (!value) return true;
   const normalized = value.trim().toLowerCase();
   return (
