@@ -1,3 +1,5 @@
 [build.environment]
+  # ADMIN_PASSWORD and SMTP_*/FROM_EMAIL currently hold template placeholder values that also appear in
+  # source/dependencies (e.g. "example.com"). Remove them from this list once real credentials are set.
   # NEXT_PUBLIC_* values are inlined into the client bundle by design and are not secrets.
-  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SITE_URL,NEXT_PUBLIC_CONTACT_EMAIL,NEXT_PUBLIC_CONTACT_PHONE,NEXT_PUBLIC_COMPANY_ADDRESS,NEXT_PUBLIC_BUSINESS_HOURS"
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SITE_URL,NEXT_PUBLIC_CONTACT_EMAIL,NEXT_PUBLIC_CONTACT_PHONE,NEXT_PUBLIC_COMPANY_ADDRESS,NEXT_PUBLIC_BUSINESS_HOURS,ADMIN_PASSWORD,SMTP_PASSWORD,SMTP_USER,SMTP_HOST,FROM_EMAIL"
