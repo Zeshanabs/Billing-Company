@@ -88,9 +88,13 @@ The admin dashboard supports:
 - contact request list
 - status filtering and updates
 
-## Deployment
+## Vercel deployment
 
-This project is compatible with Vercel or Node.js hosting platforms. For production, use a secure environment variable store and configure SMTP and database credentials before launch.
+In Vercel, import the repository and set the **Root Directory** to `nexovia-health` (the folder containing this `package.json`). Keep the detected Next.js framework and the default `npm install` and `npm run build` commands. The `postinstall` script generates the Prisma client during a clean install.
+
+Add the environment variables from `.env.example` in the Vercel project settings. Set `NEXT_PUBLIC_SITE_URL` to the deployed HTTPS URL and use real, private values for the admin and SMTP settings. Do not upload or commit `.env`.
+
+**Database limitation:** this project currently uses a local SQLite file for development. Vercel's serverless filesystem is not a persistent database, so lead and assessment submissions will not work reliably there with the current SQLite setup. Before using those features in production, switch Prisma to a hosted database (for example, PostgreSQL) and set its connection URL as `DATABASE_URL` in Vercel. The local SQLite schema and URL in `.env.example` are for development only.
 
 ## Content updates
 
