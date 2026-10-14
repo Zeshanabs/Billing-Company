@@ -132,6 +132,28 @@ export default function HomePage() {
             title="A structured path from assessment to optimized operations."
             description="The best revenue-cycle systems are built on clarity, consistency, and visible follow-up."
           />
+
+          <div className="mt-12 rounded-[32px] border border-teal-100 bg-gradient-to-r from-teal-50 via-white to-sky-50 p-6 shadow-[0_30px_80px_-35px_rgba(13,148,136,0.25)] md:p-8">
+            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-teal-700">Why practices choose Nexovia</p>
+                <h3 className="mt-3 text-3xl font-black tracking-[-0.05em] text-slate-900">Less chaos, more visibility, stronger cash flow.</h3>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-3">
+                {[
+                  { value: '90%', label: 'Process visibility' },
+                  { value: '24/7', label: 'Claims oversight' },
+                  { value: 'Faster', label: 'Payment follow-up' },
+                ].map((item) => (
+                  <div key={item.label} className="rounded-2xl border border-slate-200 bg-white/80 p-4 text-center shadow-sm">
+                    <div className="text-3xl font-black tracking-[-0.06em] text-slate-900">{item.value}</div>
+                    <div className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">{item.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
           <div className="mt-12 grid gap-6 lg:grid-cols-4">
             {processSteps.map((step, index) => (
               <div key={step} className="card-surface p-6">

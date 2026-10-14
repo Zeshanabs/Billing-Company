@@ -9,6 +9,9 @@ export const siteConfig = {
     address: process.env.NEXT_PUBLIC_COMPANY_ADDRESS ?? 'TBD',
     hours: process.env.NEXT_PUBLIC_BUSINESS_HOURS ?? 'Mon-Fri, 8:00 AM - 6:00 PM ET',
   },
+  social: {
+    github: 'https://github.com/Zeshanabs',
+  },
   legal: {
     footerNote: 'Placeholder content for review.',
   },

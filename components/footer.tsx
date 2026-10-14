@@ -19,6 +19,14 @@ export function Footer() {
                 {siteConfig.contact.email}
               </a>
               <p>{siteConfig.contact.address}</p>
+              <a
+                href={siteConfig.social.github}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-teal-300 transition hover:text-white"
+              >
+                GitHub Profile
+              </a>
             </div>
           </div>
 
