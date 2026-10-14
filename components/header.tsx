@@ -17,7 +17,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className={`sticky top-0 z-50 transition ${scrolled ? 'bg-white/90 shadow-[0_18px_40px_-30px_rgba(15,23,42,0.25)] backdrop-blur' : 'bg-white/80 backdrop-blur-sm'}`}>
+    <header className={`sticky top-0 z-50 border-b border-slate-200/70 transition ${scrolled ? 'bg-white/85 shadow-[0_18px_40px_-30px_rgba(15,23,42,0.25)] backdrop-blur-xl' : 'bg-white/75 backdrop-blur-sm'}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center" aria-label="Nexovia Health home">
           <BrandLogo compact />
@@ -32,10 +32,10 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Link href="/contact" className="rounded-full border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:text-slate-900">
+          <Link href="/contact" className="rounded-full border border-slate-200 bg-white/80 px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:text-slate-900">
             Talk to an RCM Expert
           </Link>
-          <Link href="/rcm-assessment" className="rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-700">
+          <Link href="/rcm-assessment" className="rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_18px_30px_-20px_rgba(15,23,42,0.75)] transition hover:-translate-y-0.5 hover:bg-slate-700">
             Request a Free RCM Assessment
           </Link>
         </div>

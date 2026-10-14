@@ -8,29 +8,42 @@ import { FAQAccordion } from '@/components/faq-accordion';
 export default function HomePage() {
   return (
     <>
-      <section className="container-shell section-pad">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
-            <div className="mb-5 inline-flex rounded-full border border-teal-200 bg-teal-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.24em] text-teal-800">
-              Revenue Cycle Management
-            </div>
-            <h1 className="max-w-xl text-5xl font-bold tracking-tight text-slate-950 md:text-6xl">
-              Turn Your Revenue Cycle Into a Growth Engine.
-            </h1>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-              Nexovia Health helps healthcare providers simplify medical billing, strengthen revenue cycle performance, reduce administrative burden, and improve visibility across the claims and reimbursement process.
-            </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Link href="/rcm-assessment" className="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-700">
-                Request a Free RCM Assessment
-              </Link>
-              <Link href="/services" className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:text-slate-900">
-                Explore Our Services
-              </Link>
-            </div>
-          </div>
+      <section className="relative overflow-hidden border-b border-slate-200/80 bg-[radial-gradient(circle_at_top_left,_rgba(29,183,166,0.18),transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(14,116,144,0.15),transparent_25%),linear-gradient(180deg,#f8fbff_0%,#f8fafc_100%)]">
+        <div className="container-shell section-pad">
+          <div className="grid items-center gap-12 lg:grid-cols-[1.08fr_0.92fr]">
+            <div>
+              <div className="eyebrow mb-6">Revenue Cycle Management</div>
+              <h1 className="max-w-xl text-5xl font-black tracking-[-0.06em] text-slate-950 md:text-6xl lg:text-7xl">
+                Turn Your Revenue Cycle Into a Growth Engine.
+              </h1>
+              <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600 md:text-xl">
+                Nexovia Health helps healthcare providers simplify medical billing, strengthen revenue cycle performance, reduce administrative burden, and improve visibility across the claims and reimbursement process.
+              </p>
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <Link href="/rcm-assessment" className="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_20px_35px_-20px_rgba(15,23,42,0.7)] transition hover:-translate-y-0.5 hover:bg-slate-700">
+                  Request a Free RCM Assessment
+                </Link>
+                <Link href="/services" className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white/80 px-6 py-3.5 text-sm font-semibold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:text-slate-900">
+                  Explore Our Services
+                </Link>
+              </div>
 
-          <HeroDashboard />
+              <div className="mt-10 grid max-w-xl gap-4 sm:grid-cols-3">
+                {[
+                  { label: 'Denial reduction', value: '30%+' },
+                  { label: 'Claims visibility', value: '24/7' },
+                  { label: 'Cash acceleration', value: 'Faster' },
+                ].map((stat) => (
+                  <div key={stat.label} className="rounded-2xl border border-slate-200/80 bg-white/80 p-4 shadow-[0_20px_40px_-30px_rgba(15,23,42,0.35)] backdrop-blur-sm">
+                    <div className="text-2xl font-black tracking-[-0.06em] text-slate-900">{stat.value}</div>
+                    <div className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <HeroDashboard />
+          </div>
         </div>
       </section>
 
